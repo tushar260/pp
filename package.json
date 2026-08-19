@@ -1,0 +1,24 @@
+{
+  "name": "pp",
+  "version": "1.0.0",
+  "description": "Lean Instagram #matcha hashtag ingest",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --env-file=.env server.js",
+    "migration:run": "npx typeorm migration:run -d app/db/pg/data-source.js",
+    "format:write": "prettier --write ."
+  },
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "2.1693.0",
+    "compression": "1.8.1",
+    "express": "5.2.1",
+    "pg": "8.23.0",
+    "prettier": "3.9.6",
+    "typeorm": "0.3.31",
+    "uuid": "14.0.2"
+  },
+  "devDependencies": {
+    "dotenv": "17.4.2"
+  }
+}

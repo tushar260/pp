@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.log
+.idea/
+.DS_Store
+.env
+.env.aws
+storage/
+*.jpg
+*.jpeg
+*.png
+*.mp4

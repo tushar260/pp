@@ -1,0 +1,45 @@
+const HTTP_STATUS = {
+  OK: 200,
+  UNAUTHORIZED: 401,
+  TOO_MANY_REQUESTS: 429,
+  INTERNAL_SERVER_ERROR: 500,
+};
+
+const META = {
+  PAGE_LIMIT: 50,
+  MAX_ITEMS: 500,
+  PAGE_DELAY_MS: 300,
+  USAGE_PAUSE_PCT: 80,
+  MAX_ATTEMPTS: 5,
+  BASE_RETRY_MS: 1000,
+  ERROR_CODE: {
+    APPLICATION_REQUEST_LIMIT: 4,
+    USER_REQUEST_LIMIT: 17,
+    PAGE_REQUEST_LIMIT: 32,
+  },
+  EDGE: {
+    TOP_MEDIA: "top_media",
+    RECENT_MEDIA: "recent_media",
+  },
+  SOURCE: {
+    TOP: "top",
+    RECENT: "recent",
+  },
+};
+
+const MESSAGE_TYPE = {
+  TOP: META.SOURCE.TOP,
+  RECENT: META.SOURCE.RECENT,
+  DOWNLOAD: "download",
+};
+
+const LIST_DEFAULT_LIMIT = 20;
+const LIST_MAX_LIMIT = 50;
+
+module.exports = {
+  HTTP_STATUS,
+  META,
+  MESSAGE_TYPE,
+  LIST_DEFAULT_LIMIT,
+  LIST_MAX_LIMIT,
+};
